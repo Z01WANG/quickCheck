@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>z</title>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- favicon -->
     <link rel="icon" href="./images/w_favicon.png" type="image/x-icon">
-    <!--  -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- fontAwesome -->
+    <script src="https://kit.fontawesome.com/cef8b39d0a.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <main class="border border-solid px-4 py-10">
         <div class="paper_box mx-auto max-w-[800px] w-full py-5 px-5">
-            <div class="paper_header flex">
+            <div class="paper_header flex mb-5">
                 <div class=" w-full">
                     <h1>title</h1>
                     <p>description...</p>
@@ -23,18 +26,61 @@
                 </div>
             </div>
             <!--  -->
-            <h2>WE</h2>
-            <ul class="paper_body mt-4 border border-2 border-blue-500">
-                <li class="paper_body_content">
-                    <div class="flex justify-between">
-                        <h3>firm</h3>
-                        <p class="text-gray-500">2023/12 - 2025/</p>
-                    </div>
-                    <h4>occupation</h4> 
-                    <p>description...</p>
-                </li>
+            <h2>工作經驗</h2>
+            <ul id="jobExperience" class="paper_body mt-4" role="list">
+             
             </ul>
+            <h2>EDU</h2>
+            <ul id="Education" class=" mt-4" role="list">
+             
+            </ul>
+
         </div>
     </main>
+
+    <script>
+        // Fetch the JSON file and display data
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('jobExperience');
+                data.jobExperience.forEach(job => {
+                    const jobDiv = document.createElement('li');
+                    jobDiv.classList.add('last:mb-0','py-3','paper_body_content');
+                    jobDiv.innerHTML = `
+                                <div class="flex justify-between">
+                                    <h3 class="font-medium">${job.company}</h3>
+                                    <div class="flex items-center justify-between year">
+                                        <i class="far fa-building mr-1 text-[14px]"></i>
+                                        <p class="text-gray-500">${job.startDate} - ${job.endDate}</p>
+                                    </div>
+                                </div>
+                                <h4 class="text-gray-400">${job.position}</h4> 
+                                <ul>
+                                    ${job.responsibilities.map(res => `<li>${res}</li>`).join('')}
+                                </ul>
+                    `;
+                    container.appendChild(jobDiv);
+                });       
+                const container2 = document.getElementById('Education');
+                data.Education.forEach(el => {
+                    const itemLi = document.createElement('li');
+                    itemLi.classList.add('last:mb-0','py-3','paper_body_content');
+                    itemLi.innerHTML = `
+                                <div class="flex justify-between">
+                                    <h3 class="font-medium">${el.school}</h3>
+                                    <div class="flex items-center">
+                                        <i class="far fa-building mr-1 text-[14px]"></i>
+                                        <p class="text-gray-500 year">${el.graduationDate}</p>
+                                    </div>
+                                </div>
+                                <h4 class="text-gray-400 ">${el.degree}</h4> 
+                    `;
+                    container2.appendChild(itemLi);
+                });
+            })
+            .catch(error => console.error('Error loading the data:', error));
+    </script>
+
 </body>
 </html>

@@ -1,5 +1,43 @@
-.paper_box {
-    border: 2px solid rgb(22, 101, 229);
-    border-radius: 12px;
-    box-shadow: 2px 2px 8px #00000020;
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
 }
+.paper_box {
+    // border: 2px solid rgb(22, 101, 229);
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000020;
+}
+.fa-building {
+    &:before {
+        color: grey;
+    }
+}
+.paper_body_content {
+    // padding: 8px;
+    &:not(:last-child){
+        border-bottom:  1px solid rgba(70, 93, 152, 0.2);
+    }
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background-color: rgb(12, 154, 255);
+        // backdrop-filter: blur(6px);
+        filter: blur(8px);
+        z-index: -1;
+        transform: rotate(45deg);
+    }
+}
+
+.year {
+    font-family: monospace; /* 讓數字寬度一致 */
+  }

@@ -1,0 +1,48 @@
+{
+    "jobExperience": [
+        {
+            "company": "網家跨境服務股份有限公司",
+            "position": "切版工程師",
+            "startDate": "2023/12",
+            "endDate": "2025/03",
+            "responsibilities": [
+                "Developed and maintained web applications",
+                "Collaborated with cross-functional teams",
+                "Implemented new features based on client requirements"
+            ]
+        },
+        {
+            "company": "aotter inc",
+            "position": "Junior Developer",
+            "startDate": "2022/06",
+            "endDate": "2023/09",
+            "responsibilities": [
+                "Assisted in the development of mobile applications",
+                "Performed code reviews and testing",
+                "Provided technical support to clients"
+            ]
+        },
+        {
+            "company": "拓樸工程數位科技股份有限公司",
+            "position": "前端工程師",
+            "startDate": "2020/11",
+            "endDate": "2022/03",
+            "responsibilities": [
+                "Assisted in the development of mobile applications",
+                "Performed code reviews and testing",
+                "Provided technical support to clients"
+            ]
+        }
+    ],
+    "Education": [
+        {
+            "school": "新竹教育大學",
+            "degree": "",
+            "graduationDate": "2014/09 - 2018/10"
+        },{
+            "school": "資策會uiux前端工程師就業養成班",
+            "degree": "",
+            "graduationDate": "2020/04 - 2020/10"
+        }
+    ]
+}
