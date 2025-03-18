@@ -2,12 +2,19 @@
 body {
     font-family: 'Noto Sans TC', sans-serif;
 }
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .paper_box {
     // border: 2px solid rgb(22, 101, 229);
     border-radius: 12px;
     box-shadow: 0px 2px 10px #00000020;
 }
-.fa-building {
+.icon_grey {
     &:before {
         color: grey;
     }
@@ -39,5 +46,6 @@ h2 {
 }
 
 .year {
-    font-family: monospace; /* 讓數字寬度一致 */
-  }
+  font-family: monospace; /* 讓數字寬度一致 */
+  white-space: nowrap; /* 避免換行 */
+}

@@ -1,4 +1,11 @@
 {
+    "user": {
+        "name": "王小明",
+        "jobTitle": "",
+        "email": "lezoy1699@gmail.com",
+        "phone": "",
+        "intro": ""
+    },
     "jobExperience": [
         {
             "company": "網家跨境服務股份有限公司",
@@ -6,20 +13,20 @@
             "startDate": "2023/12",
             "endDate": "2025/03",
             "responsibilities": [
-                "Developed and maintained web applications",
-                "Collaborated with cross-functional teams",
-                "Implemented new features based on client requirements"
+                "製作公司每個月行銷活動頁，製作過程中與行銷設計討論可行性及方案",
+                "協助公司系統畫面issue修正",
+                "主要使用Javsscript,sass,bootstrap,Tailwind,jQuery,Figma"
             ]
         },
         {
-            "company": "aotter inc",
-            "position": "Junior Developer",
+            "company": "電獺股份有限公司",
+            "position": "網頁設計師",
             "startDate": "2022/06",
             "endDate": "2023/09",
             "responsibilities": [
-                "Assisted in the development of mobile applications",
-                "Performed code reviews and testing",
-                "Provided technical support to clients"
+                "協助調整公司網站畫面，製作公司需求的網頁",
+                "協作公司承接的外部專案，與pm，後端，設計公同討論，主要負責畫面製作，並交付後端套版",
+                "主要使用Javsscript,Vue2,sass,bootstrap,jQuery"
             ]
         },
         {
@@ -28,9 +35,9 @@
             "startDate": "2020/11",
             "endDate": "2022/03",
             "responsibilities": [
-                "Assisted in the development of mobile applications",
-                "Performed code reviews and testing",
-                "Provided technical support to clients"
+                "公司產品畫面優化，參與新功能開發",
+                "與後端工程師一起討論資料格式並串接API",
+                "主要使用Javsscript,Vue2,sass,bootstrap,jQuery,adobeXd"
             ]
         }
     ],
@@ -40,7 +47,7 @@
             "degree": "",
             "graduationDate": "2014/09 - 2018/10"
         },{
-            "school": "資策會uiux前端工程師就業養成班",
+            "school": "資策會web前端設計工程師就業養成班60期",
             "degree": "",
             "graduationDate": "2020/04 - 2020/10"
         }
