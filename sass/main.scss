@@ -1,7 +1,16 @@
+$blue1 : #0c9aff;
+$blue1-dark : #1285d7;
 
 body {
     font-family: 'Noto Sans TC', sans-serif;
+    background-image: 
+    repeating-linear-gradient(0deg, #ccccccdc 0, #ccc 1px, transparent 1px, transparent 20px),
+    repeating-linear-gradient(90deg, #ccccccdc 0, #ccc 1px, transparent 1px, transparent 20px);
+    background-color: white;
 }
+main {
+}
+
 canvas {
     position: fixed;
     top: 0;
@@ -10,9 +19,11 @@ canvas {
 }
 
 .paper_box {
+    background: #ffffffcb;
     // border: 2px solid rgb(22, 101, 229);
     border-radius: 12px;
     box-shadow: 0px 2px 10px #00000020;
+    border: 3px solid rgb(21, 21, 21);
 }
 .icon_grey {
     &:before {
@@ -30,6 +41,9 @@ h2 {
     font-weight: 700;
     font-size: 20px;
     position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 3;
     &::before {
         content: '';
         position: absolute;
@@ -43,9 +57,96 @@ h2 {
         z-index: -1;
         transform: rotate(45deg);
     }
+    &::after {
+        content: '';
+        background: rgba(12, 154, 255, 0.5);
+        width: 90%;
+        max-width: calc(100% - 200px);
+        height: 2px;
+        right: 0;
+        position: absolute;
+        display: block;
+        @media screen and (max-width:640px) {
+            max-width: calc(100% - 100px);
+        }
+    }
 }
 
 .year {
   font-family: monospace; /* 讓數字寬度一致 */
   white-space: nowrap; /* 避免換行 */
+}
+.titlebox {
+    display: flex;
+    align-items: center;
+    &::before {
+        content: '';
+        display: inline-flex;
+        background-color: rgb(56, 81, 243);
+        width: 4px;
+        height: 16px;
+        border-radius: 4px;
+        margin-right: 2px;
+    }
+}
+
+.copyBtn {
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        color: rgb(0, 151, 252);
+        transition: linear 0.1s;
+        &::after {
+            content: '複製';
+            position: absolute;
+            bottom: -20px;
+            right: -100%;
+            width: max-content;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+    }
+}
+
+.toast {
+    transition: all 0.2s ease;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    margin: 0 auto;
+    z-index: -2;
+    opacity: 0;
+    p{
+        display: flex;
+        background-color: #00000095;
+        color: white;
+        padding: 4px 12px;
+    }
+    &.show {
+        transition: all 0.2s ease;
+        z-index: 999;
+        opacity: 1;
+    }
+}
+.mail_link {
+    cursor: pointer;
+    color: $blue1-dark;
+    &:hover {
+        color: $blue1;
+    }
+}
+.picHead {
+    background-image: url("../images/portrait.JPG");
+    background-size: 140%;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px $blue1;
 }

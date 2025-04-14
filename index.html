@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>z</title>
+    <title>Z的CV</title>
     <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="打開是王依婷的簡歷這裡是王依婷的網頁akaZ的Web">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +19,30 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <main class="border border-solid px-4 py-10">
-        <div class="paper_box mx-auto max-w-[800px] w-full py-5 px-3 sm:px-5">
-            <div class="paper_header flex mb-5">
-                <div class="w-[calc(100%-120px)] pr-3">
-                    <h1 class="text-[22px] border border-solid border-blue-500 text-right">Zoe Wang</h1>
-                    <p>description...</p>
+    <main class="px-3 sm:px-4 py-4 sm:py-10">
+        <div class="paper_box mx-auto max-w-[800px] w-full py-5 px-3 sm:p-8 sm:px-5">
+            <div class="paper_header flex flex-col-reverse sm:flex-row mb-8">
+                <div class="w-full sm:w-[calc(100%-120px)] sm:pr-4 flex flex-col justify-between">
+                    <h1 class="text-[20px] text-center sm:text-right font-bold">Zoe 王依婷</h1>
+                    <p class=" text-[14px] indent-[2ch] text-justify">
+                        我曾在土木營建管理SaaS平台、新創品牌部門與電商平台任職前端相關工作，負責系統維護、行銷頁切版與畫面優化。
+                        這些經歷讓我不只跟後端工程師合作，也在過程中累積了與PM、設計、行銷部門協作的經驗。
+                        近期的我，正探索轉職到<strong>專案管理</strong>或<strong>客戶成功</strong>等角色，雖然這些職位與我原先的工程職務不同，但我相信自己在細節處理、邏輯表達、需求理解與團隊合作上的優勢，能為轉型後的角色帶來助力。
+                    </p>
+                    <ul class="text-[14px]">
+                     <li>
+                        <span><i class="fas fa-envelope mr-1 mt-2 sm:mt-1"></i>聯絡信箱：</span>
+                        <a href="mailto:lezoy1699@gmail.com" class="mail_link" id="emailAdress">lezoy1699@gmail.com</a>
+                        <i class="fas fa-copy text-[14px] text-[#1285d7] copyBtn"></i>
+                     </li>
+                    </ul>
                 </div>
-                <div class="paper_header_title">
-                    <img src="" alt="" class="border border-2 bg-blue-500 rounded-lg w-[120px] h-[120px]">
+                <div class="paper_header_title mb-2 sm:mb-0 mx-auto sm:mx-0 picHead w-[120px] h-[120px] sm:w-[180px] sm:h-[180px]">
                 </div>
             </div>
             <!--  -->
             <h2>工作經驗</h2>
-            <ul id="jobExperience" class="paper_body my-4" role="list">
+            <ul id="jobExperience" class="paper_body my-2 sm:my-4" role="list">
              
             </ul>
             <h2>學習</h2>
@@ -42,42 +53,36 @@
         </div>
     </main>
 
+    <div class="toast show"></div>
+
 
     <!-- GSAP & p5.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-    <script>
-   let particles = [];
 
-// function setup() {
-//     let cnv = createCanvas(windowWidth, windowHeight);
-//     cnv.position(0, 0);
-//     cnv.style('z-index', '-1');
-//     noStroke();
-//     for (let i = 0; i < 100; i++) {
-//         particles.push({
-//             x: random(width),
-//             y: random(height),
-//             size: random(3, 7),
-//             alpha: random(80, 180),
-//             speed: random(0.3, 1.2),
-//             color: random([color(30, 144, 255, 150), color(255, 215, 0, 150)]) // 藍色 & 黃色
-//         });
-//     }
-// }
-
-// function draw() {
-//     clear(); // 讓背景透明
-//     for (let p of particles) {
-//         fill(p.color);
-//         ellipse(p.x, p.y, p.size, p.size);
-//         p.alpha += sin(frameCount * 0.01) * p.speed;
-//         p.alpha = constrain(p.alpha, 80, 180);
-//     }
-// }
-    </script>
     <script>
+        const spreadsheetId = '1Ka7zekQz-GPEqfwoHb-BWfg-mqNRi5zpaMP9KGQ6oec';
+        const sheetName = '工作表1'; // 或是工作表的英文名稱 Sheet1 等
+
+        const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?sheet=${sheetName}`;
+
+        fetch(url)
+        .then(res => res.text())
+        .then(data => {
+            // 解析 JSON：去掉前面的多餘字串
+            const json = JSON.parse(data.substr(47).slice(0, -2));
+            const rows = json.table.rows;
+
+            // 把 rows 轉成 JSON 格式
+            const result = rows.map(row => {
+            return row.c.map(cell => (cell ? cell.v : ''));
+            });
+
+            console.log(result);
+            // 你可以進一步把它轉為物件形式（如有表頭）
+        });
+
         // Fetch the JSON file and display data
         fetch('data.json')
             .then(response => response.json())
@@ -95,9 +100,16 @@
                                         <p class="text-gray-400 year max-sm:text-[12px]">${job.startDate} - ${job.endDate}</p>
                                     </div>
                                 </div>
-                                <h4 class="text-blue-600">${job.position}</h4> 
-                                <ul class="text-[14px]">
-                                    ${job.responsibilities.map(res => `<li>${res}</li>`).join('')}
+                                <h4 class="text-blue-600 mb-2">${job.position}</h4> 
+
+                                <p class="font-bold text-[14px] mb-1 titlebox">工作內容：</p> 
+                                <ul class="text-[14px] mb-2 text-gray-600 flex flex-col">
+                                    ${job.responsibilities.map(res => `<li class="pl-[14px] indent-[-14px]">${res}</li>`).join('')}
+                                </ul>
+
+                                <p class="font-bold text-[14px] mb-1 titlebox">接觸工具：</p> 
+                                <ul class="text-[14px] flex flex-wrap">
+                                    ${job.tools.map(res => `<li class="border border-gray-600 border-sold mr-1 mb-1 px-2 rounded-sm text-gray-600">${res}</li>`).join('')}
                                 </ul>
                     `;
                     container.appendChild(jobDiv);
@@ -114,12 +126,34 @@
                                         <p class="text-gray-500 year max-sm:text-[12px]">${el.graduationDate}</p>
                                     </div>
                                 </div>
-                                <h4 class="text-gray-400 ">${el.degree}</h4> 
+                                <h4 class="text-gray-400 text-[14px]">${el.degree}</h4> 
                     `;
                     container2.appendChild(itemLi);
                 });
             })
             .catch(error => console.error('Error loading the data:', error));
+            // Copy email address to clipboard  
+            const emailAdress = document.getElementById('emailAdress');
+            const copyBtn = document.querySelector('.copyBtn');
+            copyBtn.addEventListener('click', () => {
+                const email = emailAdress.textContent;
+                navigator.clipboard.writeText(email)
+                    .then(() => {
+                        showToast('Email 已複製到剪貼簿！');
+                    })
+                    .catch(err => {
+                        console.error('Error copying email address: ', err);
+                    });
+            });
+            function showToast(message) {
+                const toast = document.querySelector('.toast');
+                toast.classList.add("show");
+                toast.innerHTML =  `<p>${message}</p>`;
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 3000);
+            }
     </script>
 
 </body>

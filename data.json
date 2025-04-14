@@ -1,6 +1,6 @@
 {
     "user": {
-        "name": "王小明",
+        "name": "Zoe",
         "jobTitle": "",
         "email": "lezoy1699@gmail.com",
         "phone": "",
@@ -13,9 +13,24 @@
             "startDate": "2023/12",
             "endDate": "2025/03",
             "responsibilities": [
-                "製作公司每個月行銷活動頁，製作過程中與行銷設計討論可行性及方案",
-                "協助公司系統畫面issue修正",
-                "主要使用Javsscript,sass,bootstrap,Tailwind,jQuery,Figma"
+                "- 依據行銷需求製作公司網站每月活動頁，與設計、行銷部門協作釐清版面需求與推廣重點，確保版面規劃與時程配合行銷檔期",
+                "- 負責 HTML/CSS/SCSS/JavaScript 切版與樣式維護，確保跨裝置瀏覽一致性",
+                "- 偶爾協助修正前端頁面錯誤與樣式異常，主動追蹤問題並提出可行修正方案",
+                "- 與行銷、設計團隊合作討論版型製作可能性，協助評估需求的技術可行性與落地方式",
+                "- 參與跨部門日常溝通，主動釐清模糊需求，提升執行效率與任務準確性",
+                "- 遇到技術障礙時，能主動查詢資料並善用 ChatGPT 工具協助除錯與產出解法，提升問題解決效率與執行品質",
+                " <div class='indent-0 flex items-center text-[blue] mr-1'><i class='fas fa-hand-point-right'></i><a class='underline-offset-3 underline text-[blue] font-bold block my-2' href='https://navy-sesame-b3a.notion.site/1ce90d4d1eb68017b74ff459ea13c739' target='_blank'>工作實際案例</a></div>"
+            ],
+            "tools": [
+                "JavaScript",
+                "sass",
+                "bootstrap",
+                "Tailwind",
+                "jQuery",
+                "Figma",
+                "Google spreadsheet",
+                "Asana",
+                "Bitbucket"
             ]
         },
         {
@@ -24,27 +39,49 @@
             "startDate": "2022/06",
             "endDate": "2023/09",
             "responsibilities": [
-                "協助調整公司網站畫面，製作公司需求的網頁",
-                "協作公司承接的外部專案，與pm，後端，設計公同討論，主要負責畫面製作，並交付後端套版",
-                "主要使用Javsscript,Vue2,sass,bootstrap,jQuery"
+                "- 參與公司外部專案前端開發，根據設計稿進行網頁切版並確保呈現一致性與互動效果",
+                "- 參與畫面對焦會議，與設計師、PM、研發共同討論畫面操作邏輯與實作方式可行性",
+                "- 根據需求尋找並評估合適的 UI 套件或功能實作方式，遇到技術難點能主動查詢資料並解決問題",
+                "- 在開發過程中，主動與設計師協調調整素材，並針對操作流程不順提出優化建議",
+                "- 參與畫面製作：<a href='https://space.aotter.net/'>aotter space</a>, <a href='https://www.studybar.com.tw/'>studybar</a>"
+            ],
+            "tools": [
+                "JavaScript",
+                "Sass",
+                "Vue2",
+                "Bootstrap",
+                "jQuery",
+                "Figma",
+                "Github",
+                "GitHub Projects"
             ]
         },
         {
-            "company": "拓樸工程數位科技股份有限公司",
+            "company": "拓璞工程數位科技股份有限公司",
             "position": "前端工程師",
             "startDate": "2020/11",
             "endDate": "2022/03",
             "responsibilities": [
-                "公司產品畫面優化，參與新功能開發",
-                "與後端工程師一起討論資料格式並串接API",
-                "主要使用Javsscript,Vue2,sass,bootstrap,jQuery,adobeXd"
+                "- 依據設計圖進行前端畫面與互動功能開發，參與專案需求討論並與 UI 設計師討論使用流程與畫面細節",
+                "- 初期負責公司內部系統的 RWD 改版與樣式優化，導入 Sass 以提升樣式維護效率，同時協助修復既有頁面錯誤",
+                "- 後期與後端工程師協作，使用 Vue2 開發日誌功能模組，涵蓋工期設定、日誌編輯、圖片上傳等功能需求",
+                "- 開發過程中主動與 UI 設計師討論操作邏輯與使用者體驗，確保功能符合實際需求"
+            ],
+            "tools": [
+                "JavaScript",
+                "Vue2",
+                "Sass",
+                "Bootstrap",
+                "Tailwind",
+                "jQuery",
+                "AdobeXd"
             ]
         }
     ],
     "Education": [
         {
             "school": "新竹教育大學",
-            "degree": "",
+            "degree": "英語教學系",
             "graduationDate": "2014/09 - 2018/10"
         },{
             "school": "資策會web前端設計工程師就業養成班60期",
