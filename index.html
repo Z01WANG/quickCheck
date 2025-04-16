@@ -62,29 +62,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 
     <script>
-        const spreadsheetId = '1Ka7zekQz-GPEqfwoHb-BWfg-mqNRi5zpaMP9KGQ6oec';
-        const sheetName = '工作表1'; // 或是工作表的英文名稱 Sheet1 等
+        // const spreadsheetId = '1Ka7zekQz-GPEqfwoHb-BWfg-mqNRi5zpaMP9KGQ6oec';
+        // const sheetName = '工作表1'; // 或是工作表的英文名稱 Sheet1 等
 
-        const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?sheet=${sheetName}`;
+        // const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?sheet=${sheetName}`;
 
-        fetch(url)
-        .then(res => res.text())
-        .then(data => {
-            // 解析 JSON：去掉前面的多餘字串
-            const json = JSON.parse(data.substr(47).slice(0, -2));
-            const rows = json.table.rows;
+        // fetch(url)
+        // .then(res => res.text())
+        // .then(data => {
+        //     // 解析 JSON：去掉前面的多餘字串
+        //     const json = JSON.parse(data.substr(47).slice(0, -2));
+        //     const rows = json.table.rows;
 
-            // 把 rows 轉成 JSON 格式
-            const result = rows.map(row => {
-            return row.c.map(cell => (cell ? cell.v : ''));
-            });
+        //     // 把 rows 轉成 JSON 格式
+        //     const result = rows.map(row => {
+        //     return row.c.map(cell => (cell ? cell.v : ''));
+        //     });
 
-            console.log(result);
-            // 你可以進一步把它轉為物件形式（如有表頭）
-        });
+        //     console.log(result);
+        //     // 你可以進一步把它轉為物件形式（如有表頭）
+        // });
 
         // Fetch the JSON file and display data
-        fetch('data.json')
+        fetch('data.json?v=2')
             .then(response => response.json())
             .then(data => {
                 console.log("data:",data)
